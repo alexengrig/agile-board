@@ -1,5 +1,5 @@
 import { createStore } from 'redux';
-import reducer from './reducer';
+import reducer, { mapBoardDispatchToProps, mapBoardStateToProps } from './reducer';
 
 const configureStore = () => {
   const store = createStore(reducer);
@@ -8,3 +8,5 @@ const configureStore = () => {
 };
 
 export default configureStore;
+
+export { mapBoardStateToProps, mapBoardDispatchToProps };
