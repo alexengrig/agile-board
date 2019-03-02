@@ -4,11 +4,12 @@ import Board from "../layouts/Board";
 
 const routes = [
   {
-    pathname: paths.board,
+    path: paths.board,
+    exact: true,
     component: Board
   },
   {
-    pathname: paths.root,
+    path: paths.root,
     component: Main
   }
 ];

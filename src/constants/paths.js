@@ -1,3 +1,3 @@
 export const root = '/';
 
-export const board = '/board';
+export const board = '/board/:boardId';

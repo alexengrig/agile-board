@@ -13,11 +13,7 @@ class App extends Component {
         <BrowserRouter>
           <Switch>
             {routes.map((route, index) => (
-              <Route
-                key={index}
-                path={route.pathname}
-                component={route.component}
-              />
+              <Route key={index} {...route} />
             ))}
           </Switch>
         </BrowserRouter>
