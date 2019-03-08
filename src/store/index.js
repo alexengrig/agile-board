@@ -1,18 +1,11 @@
 import { createStore } from 'redux';
-import reducer, {
-  mapBoardDispatchToProps, mapBoardStateToProps,
-  mapBoardsStateToProps, mapBoardsDispatchToProps
-} from './reducer';
+import reducer from './reducer';
 
-const configureStore = () => {
-  const store = createStore(reducer);
+export default function configureStore() {
+  return createStore(reducer);
+}
 
-  return store;
-};
-
-export default configureStore;
-
-export {
-  mapBoardStateToProps, mapBoardDispatchToProps,
-  mapBoardsStateToProps, mapBoardsDispatchToProps
-};
+export { mapStateToProps as mapBoardStateToProps, mapDispatchToProps as mapBoardDispatchToProps } from './board';
+export { mapStateToProps as mapBoardsStateToProps, mapDispatchToProps as mapBoardsDispatchToProps } from './boards';
+export { mapStateToProps as mapTeamStateToProps, mapDispatchToProps as mapTeamDispatchToProps } from './team';
+export { mapStateToProps as mapTeamsStateToProps, mapDispatchToProps as mapTeamsDispatchToProps } from './teams';
