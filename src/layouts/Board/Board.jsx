@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import BoardInfo from '../containers/BoardInfo';
+import { Board as BoardContainer } from '../../containers';
 
 class Board extends Component {
   render() {
     return (
       <div>
         <h1>BOARD</h1>
-        <BoardInfo match={this.props.match} />
         <main>
-          content
+          <BoardContainer match={this.props.match} />
         </main>
       </div>
     );

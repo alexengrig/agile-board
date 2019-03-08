@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Boards, Teams } from '../../containers';
 
 class Main extends Component {
   render() {
@@ -6,7 +7,8 @@ class Main extends Component {
       <div>
         <h1>MAIN</h1>
         <main>
-          content
+          <Boards />
+          <Teams />
         </main>
       </div>
     );
