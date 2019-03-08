@@ -12,8 +12,8 @@ class App extends Component {
       <Provider store={store}>
         <BrowserRouter>
           <Switch>
-            {routes.map((route, index) => (
-              <Route key={index} {...route} />
+            {routes.map((route, key) => (
+              <Route key={key} {...route} />
             ))}
           </Switch>
         </BrowserRouter>
