@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { mapBoardStateToProps, mapBoardDispatchToProps } from '../store';
+import { mapBoardDispatchToProps, mapBoardStateToProps } from '../../store';
 
-class BoardInfo extends Component {
+class Board extends Component {
   componentDidMount() {
     this.props.onFetchBoard(this.props.match.params.boardId);
   }
@@ -19,4 +19,4 @@ class BoardInfo extends Component {
   }
 }
 
-export default connect(mapBoardStateToProps, mapBoardDispatchToProps)(BoardInfo);
+export default connect(mapBoardStateToProps, mapBoardDispatchToProps)(Board);
