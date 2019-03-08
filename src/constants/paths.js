@@ -1,3 +1,9 @@
-export const root = '/';
+const root = '/';
 
-export const board = '/board/:boardId';
+const boardId = ':boardId';
+const board = `/board/${boardId}`;
+
+const teamId = ':teamId';
+const team = `/team/${teamId}`;
+
+export default { root, boardId, board, teamId, team };
