@@ -1,17 +1,33 @@
 {
   "name": "agile-board",
   "version": "1.0.0",
-  "description": "Agile board",
-  "main": "index.js",
-  "repository": "https://github.com/alexengrig/agile-board.git",
-  "author": "alexengrig <alexengrigdev@gmail.com>",
-  "license": "MIT",
   "private": true,
+  "description": "Agile board",
+  "repository": "https://github.com/alexengrig/agile-board.git",
+  "license": "MIT",
+  "author": "alexengrig <alexengrigdev@gmail.com>",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config config/webpack.config.js --mode production",
+    "clean": "rm -R node_modules; rm yarn.lock; rm package-lock.json",
+    "start": "webpack-dev-server --config config/webpack.config.js --mode development --open"
+  },
+  "dependencies": {
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-redux": "^6.0.1",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
     "eslint": "^5.15.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
     "path": "^0.12.7",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3",
