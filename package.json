@@ -6,5 +6,11 @@
   "repository": "https://github.com/alexengrig/agile-board.git",
   "author": "alexengrig <alexengrigdev@gmail.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "path": "^0.12.7",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.1"
+  }
 }
