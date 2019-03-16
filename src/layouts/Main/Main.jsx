@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { AppBar, IconButton, List, Toolbar, withStyles } from '@material-ui/core';
+import { AppBar, IconButton, Toolbar, withStyles } from '@material-ui/core';
 import { Dashboard as DashboardIcon, Home as HomeIcon } from '@material-ui/icons';
-import { NavLink, Redirect, Route, Switch } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import { mainRoutes as routes } from '../../routes';
 
 const styles = theme => ({
@@ -34,22 +34,13 @@ class Main extends Component {
           </Toolbar>
         </AppBar>
         <main className={classes.content}>
-          <section>
-            <List component='nav'>
-              <NavLink to='/boards'>
-                Boards
-              </NavLink>
-            </List>
-          </section>
-          <section>
-            <Switch>
-              {routes.map((route, key) => (
-                route.redirect ?
-                  <Redirect to={route.to} /> :
-                  <Route key={key} {...route} />
-              ))}
-            </Switch>
-          </section>
+          <Switch>
+            {routes.map((route, key) => (
+              route.redirect ?
+                <Redirect to={route.to} /> :
+                <Route key={key} {...route} />
+            ))}
+          </Switch>
         </main>
       </div>
     );
