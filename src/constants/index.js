@@ -1,1 +1,3 @@
-export { default as paths } from './paths';
+import * as paths from './paths';
+
+export { paths };
