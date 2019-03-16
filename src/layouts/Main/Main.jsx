@@ -37,7 +37,7 @@ class Main extends Component {
           <Switch>
             {routes.map((route, key) => (
               route.redirect ?
-                <Redirect to={route.to} /> :
+                <Redirect key={key} to={route.to} /> :
                 <Route key={key} {...route} />
             ))}
           </Switch>
