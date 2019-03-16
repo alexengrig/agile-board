@@ -1,21 +1,9 @@
-import { paths } from '../constants';
-import { Board, Main, Team } from '../layouts';
+import admin from './admin';
+import main from './main';
 
-const routes = [
-  {
-    path: paths.board,
-    exact: true,
-    component: Board
-  },
-  {
-    path: paths.team,
-    exact: true,
-    component: Team
-  },
-  {
-    path: paths.root,
-    component: Main
-  }
-];
+const routes = [admin, main];
 
 export default routes;
+
+export { subroutes as adminRoutes } from './admin';
+export { subroutes as mainRoutes } from './main';

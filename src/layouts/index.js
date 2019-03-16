@@ -1,3 +1,2 @@
-export { default as Board } from './Board';
+export { default as Admin } from './Admin';
 export { default as Main } from './Main';
-export { default as Team } from './Team';
